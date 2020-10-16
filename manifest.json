@@ -1,0 +1,38 @@
+{
+  "name": "simutrainix",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This extension fixes the UI for play.net training",
+  "homepage_url": "https://github.com/elanthia-online/simutronfix",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "permissions": [
+    "https://www.play.net/gs4/play/cm/trainer.asp"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.play.net/gs4/play/cm/trainer.asp"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.play.net/gs4/play/cm/trainer.asp"
+      ],
+      "js": [
+        "src/inject/underscore.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}

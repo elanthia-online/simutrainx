@@ -1,0 +1,68 @@
+.normM1 {
+  /* wrapper css */
+}
+
+table {
+  /*table-layout: fixed;*/
+}
+
+.bannerContainer {
+  display: none !important;
+}
+
+.mainContainer2 {
+  top: 0 !important;
+  position: relative !important;
+  z-index: 1;
+}
+
+.skillContainer {
+  overflow: unset !important;
+}
+
+.leftbar {
+  position: fixed !important;
+  height: 100% !important;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  vertical-align: middle;
+}
+
+.batch {
+  height: 16px;
+  width: 3em;
+  margin: 0em 0.5em;
+  border: 2px solid #36454f;
+  display: inline-block;
+  line-height: 16px;
+  font-size: 12px;
+}
+
+.batch:hover {
+  background-color: #36454f;
+  color: #f1f1f1;
+}
+
+.batch:before {
+  text-align: center;
+}
+
+.up-10:before {
+  content: "+10";
+}
+
+.up-100:before {
+  content: "+100";
+}
+
+.down-100:before {
+  content: "-100";
+}
+
+.down-10:before {
+  content: "-10";
+}
