@@ -1,5 +1,10 @@
 chrome.runtime.sendMessage({greeting: "hello"}, r => r.farewell)
 
+var script = document.createElement('script')
+script.textContent = `window.alert = function () {}`
+document.head.appendChild(script)
+script.remove()
+
 const query =
 	selector => Array.from(document.querySelectorAll(selector))
 
