@@ -1,38 +1,31 @@
 {
-  "name": "simutrainix",
-  "version": "1.0.0",
-  "manifest_version": 2,
-  "description": "This extension fixes the UI for play.net training",
-  "homepage_url": "https://github.com/elanthia-online/simutrainx/",
+  "manifest_version": 3,
+  "name": "SimuTrainX",
+  "version": "1.1",
+  "description": "Adds rank control buttons to GSIV's trainer.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["https://www.play.net/gs4/play/cm/trainer.asp"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.play.net/gs4/play/cm/trainer.asp"],
+      "js": [
+        "src/inject/underscore.js",
+        "src/inject/inject.js"
+      ],
+      "css": ["src/inject/inject.css"]
+    }
+  ],
+
+  "background": {
+    "service_worker": "src/bg/background.js"
+  },
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
-  },
-  "background": {
-    "page": "src/bg/background.html",
-    "persistent": true
-  },
-  "permissions": [
-    "https://www.play.net/gs4/play/cm/trainer.asp"
-  ],
-  "content_scripts": [
-    {
-      "matches": [
-        "https://www.play.net/gs4/play/cm/trainer.asp"
-      ],
-      "css": [
-        "src/inject/inject.css"
-      ]
-    },
-    {
-      "matches": [
-        "https://www.play.net/gs4/play/cm/trainer.asp"
-      ],
-      "js": [
-        "src/inject/underscore.js",
-        "src/inject/inject.js"
-      ]
-    }
-  ]
+  }
 }
