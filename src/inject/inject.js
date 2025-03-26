@@ -52,6 +52,10 @@ train_buttons.forEach(btn => {
 	createBatchButton(btn, 100)
 	createBatchButton(btn, 10)
 })
+train_buttons.forEach(btn => {
+    btn.parentElement.classList.add('fix-align');
+});
+
 
 recover_buttons.forEach(btn => {
 	createBatchButton(btn, -100)
