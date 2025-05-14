@@ -1,9 +1,4 @@
 
-var script = document.createElement('script')
-script.textContent = `window.alert = function () {}`
-document.head.appendChild(script)
-script.remove()
-
 const query =
 	selector => Array.from(document.querySelectorAll(selector))
 
