@@ -1,4 +1,3 @@
-chrome.runtime.sendMessage({greeting: "hello"}, r => r.farewell)
 
 var script = document.createElement('script')
 script.textContent = `window.alert = function () {}`
@@ -8,13 +7,13 @@ script.remove()
 const query =
 	selector => Array.from(document.querySelectorAll(selector))
 
-const buttons = 
+const buttons =
 	()=> query(".normM1 img")
 
 const prune =
 	()=> query(".batch").forEach(ele => ele.remove())
 
-const fetchTrainingButtons = 
+const fetchTrainingButtons =
 	()=> _.partition(buttons(), btn => btn.alt.toLowerCase().match(/^(train|get)\s/))
 
 // we cannot directly call upskill/downskill because it does not
@@ -32,9 +31,9 @@ const createBatchButton = (base, n) => {
 	const abs_n = Math.abs(n)
 	batch_button.classList.add("batch")
 	batch_button.classList.add((n > 0 ? "up" : "down") + "-" + abs_n)
-	base.insertAdjacentElement(n < 0 ? "beforebegin" : "afterend", 
+	base.insertAdjacentElement(n < 0 ? "beforebegin" : "afterend",
 		batch_button)
-	batch_button.onclick = 
+	batch_button.onclick =
 		()=> _.times(abs_n, (n)=> { setTimeout(fakeClick, 0, base, n) })
 }
 
