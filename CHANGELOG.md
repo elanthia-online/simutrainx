@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/elanthia-online/simutrainx/compare/v1.3.0...v1.4.0) (2025-05-14)
+
+
+### Features
+
+* add no-alert service worker ([4be55ac](https://github.com/elanthia-online/simutrainx/commit/4be55ac6cf4f49467fa928e3f09de13cb78fd5ea))
+
 ## [1.3.0](https://github.com/elanthia-online/simutrainx/compare/v1.2.0...v1.3.0) (2025-03-28)
 
 
