@@ -5,7 +5,7 @@ Adds buttons for +/- 10 ranks and +/- 100 ranks to the GSIV trainer page once in
 ![simutrainix](https://user-images.githubusercontent.com/1090434/96200054-0069b180-0f27-11eb-8788-9feb8ea19418.png)
 
 ## Installation
-### Chromium Browsers (Google Chrome, Microsoft Edge, etc)
+### Chromium Browsers (Google Chrome, Microsoft Edge, Brave, etc)
 Currently the addon is a manifest v3 plugin that is supported natively via the [Google Chrome Store](https://chromewebstore.google.com/detail/simutrainx/lonampanbgflbjamogdofgbicfemmcgj) for Chromium based browsers.
 
 ### Gecko Browsers (Firefox Nightly, Waterfox, Librewolf, Floorp)
